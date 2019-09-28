@@ -6,4 +6,10 @@ while(i<l1-1 && i< l2-1){
             i++;
         }
         but correct was while(i<l1 && i< l2){
-Review code before submitting        
+2)Review code before submitting    
+
+3)In comparator why returning 0 preserves the order of elements
+Because when we use Comparator for Arrays.sort(), the implementation is mergeSort, you can check official document for Arrays.sort(T[] a, Comparator<? super T> c). And merge sort will keep the order if 2 elements are the same!!!
+
+However, for Array.sort() methods like Array.sort(int[]/double[]/char[]) without using Comparator, the implementation is quickSort, it will not keep the original order. For example, check the Java doc for sorting int[] array public static void sort(int[] a).
+However, thanks for @GregorGk mentioning, these are all primitive types array, no need to consider their order
