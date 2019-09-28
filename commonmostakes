@@ -6,4 +6,4 @@ while(i<l1-1 && i< l2-1){
             i++;
         }
         but correct was while(i<l1 && i< l2){
-        
+Review code before submitting        
