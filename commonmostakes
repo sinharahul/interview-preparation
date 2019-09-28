@@ -1,0 +1,9 @@
+1)Off by one arrays while comparing
+Wrote
+while(i<l1-1 && i< l2-1){
+            int c=s1arr[i].compareTo(s2arr[i]);
+            if(c!=0)return c;
+            i++;
+        }
+        but correct was while(i<l1 && i< l2){
+        
