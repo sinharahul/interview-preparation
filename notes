@@ -1,0 +1,26 @@
+1)Java comparator:int compare(T o1,
+            T o2)
+ Compares its two arguments for order. Returns a negative integer, zero, or a positive integer as the first argument is less than, equal to, or greater than the second.
+Used in Arrays.sort or Collections.sort
+public String[] reorderLogFiles(String[] logs) {
+        String[] res=null;
+        Arrays.sort(logs,(s1,s2)->{
+            String[] s1arr=s1.split(" ");
+            String[] s2arr=s2.split(" ");
+            if(isAlpha(s1arr[1]) && isAlpha(s2arr[1])){
+                return compareStringArrays(s1arr,s2arr);
+            }
+            if(isAlpha(s1arr[1]) && !isAlpha(s2arr[1])){
+                 return -1;
+            }
+            if(!isAlpha(s1arr[1]) && isAlpha(s2arr[1])){
+                return 1;
+            }
+            if(!isAlpha(s1arr[1]) && !isAlpha(s2arr[1])){
+                //Return in order of elems in array
+                return 0;
+            }
+            return 0;
+        });
+        return logs;
+    }
