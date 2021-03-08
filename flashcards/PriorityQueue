@@ -1,0 +1,10 @@
+https://www.coursera.org/learn/data-structures/lecture/2OpTs/introduction
+Implemented using binary heap, insert and findmin/max takes O(n)
+1) Create a max heap
+ PriorityQueue<Integer> pq=new PriorityQueue<>
+                   ((a,b)->b-a);
+2)Create a min heap
+ PriorityQueue<Integer> pq=new PriorityQueue<>()
+ insert ->O(n)
+
+
